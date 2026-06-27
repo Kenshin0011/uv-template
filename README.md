@@ -27,7 +27,7 @@ mise install
 ### 3. 仮想環境の作成と依存関係の同期 (uv)
 
 ```bash
-uv sync
+mise exec -- uv sync
 ```
 
 ## 開発コマンド一覧
@@ -35,7 +35,7 @@ uv sync
 ### アプリケーションの実行
 
 ```bash
-uv run python src/main.py
+mise exec -- uv run src/main.py
 ```
 
 ### コードの自動整形とチェック (ruff)
@@ -45,33 +45,33 @@ uv run python src/main.py
 - コードの自動整形 (フォーマット):
 
 ```bash
-uv run ruff format
+mise exec -- uv run ruff format
 ```
 
 - コードの静的解析 (リンターチェック):
 
 ```bash
-uv run ruff check
+mise exec -- uv run ruff check
 ```
 
 - リンターによる自動修正の適用:
 
 ```bash
-uv run ruff check --fix
+mise exec -- uv run ruff check --fix
 ```
 
 ### テストの実行
 `pytest` を使用してテスト一式を実行します
 
 ```bash
-uv run pytest
+mise exec -- uv run pytest
 ```
 
 詳細なテスト結果やカバレッジを確認したい場合:
 
 ```bash
 # 冗長表示モードで実行
-uv run pytest -v
+mise exec -- uv run pytest -v
 ```
 
 ### 開発用パッケージ(pytest等)の追加方法
