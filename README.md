@@ -77,5 +77,5 @@ mise exec -- uv run pytest -v
 ### 開発用パッケージ(pytest等)の追加方法
 
 ```bash
-uv add --dev pytest
+mise exec -- uv add --dev pytest
 ```
